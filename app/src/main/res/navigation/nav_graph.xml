@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashFragMent">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.firstapp.fragment.MainFragment"
+        android:label="MainFragment"
+
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_questionFragment"
+            app:destination="@id/questionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashFragMent"
+        android:name="com.example.firstapp.fragment.splashFragMent"
+        android:label="splashFragMent"
+        tools:layout="@layout/splash_main">
+        <action
+            android:id="@+id/action_splashFragMent_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@animator/nav_default_pop_enter_anim"
+
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFragment"
+        android:name="com.example.firstapp.fragment.questionFragment"
+        android:label="questionfragment"
+        tools:layout="@layout/questionfragment" >
+        <action
+            android:id="@+id/action_questionFragment_to_answerFragment"
+            app:destination="@id/answerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/answerFragment"
+        android:name="com.example.firstapp.fragment.answerFragment"
+        android:label="answerFragment" >
+        <action
+            android:id="@+id/action_answerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+</navigation>
