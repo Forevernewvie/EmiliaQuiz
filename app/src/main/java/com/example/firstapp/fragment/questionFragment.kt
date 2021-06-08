@@ -1,5 +1,6 @@
 package com.example.firstapp.fragment
 
+
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -30,9 +31,7 @@ class questionFragment : Fragment() {
             contentData(5,"에키드나는 에밀리아를 싫어한다.",R.drawable.icon,R.drawable.circle,R.drawable.x,true),
             contentData(6,"에밀리아는 팩에게 죽은적이 있다.",R.drawable.icon,R.drawable.circle,R.drawable.x,true),
             contentData(7,"에밀리아의 키는 164cm이다.",R.drawable.icon,R.drawable.circle,R.drawable.x,true),
-            contentData(8,"에밀리아는 렘을 기억 한다.",R.drawable.icon,R.drawable.circle,R.drawable.x,false),
-            contentData(9,"람은 에밀리아를 좋게 보지 않았었다(성지 이전).",R.drawable.icon,R.drawable.circle,R.drawable.x,true),
-            contentData(10,"에밀리아의 양아버지 쥬스는 페텔기우스 로마네콩티다.",R.drawable.icon,R.drawable.circle,R.drawable.x,true)
+            contentData(8,"에밀리아는 렘을 기억 한다.",R.drawable.icon,R.drawable.circle,R.drawable.x,false)
         )
 
 
@@ -45,4 +44,3 @@ class questionFragment : Fragment() {
         return v
     }
 }
-

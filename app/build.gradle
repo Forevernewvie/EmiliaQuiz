@@ -6,6 +6,8 @@ plugins {
 android {
     compileSdkVersion 29
 
+
+
     defaultConfig {
         applicationId "com.example.firstapp"
         minSdkVersion 26
@@ -29,9 +31,7 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
+
 }
 
 dependencies {

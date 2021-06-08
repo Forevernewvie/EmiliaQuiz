@@ -16,7 +16,7 @@ class RecyclerAdapter(val contentList:ArrayList<contentData>): RecyclerView.Adap
     lateinit var view : View
     lateinit var navController: NavController
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.ViewHolder {
-        view =LayoutInflater.from(parent.context).inflate(R.layout.layout_recyclerview_item,parent,false)
+        view = LayoutInflater.from(parent.context).inflate(R.layout.layout_recyclerview_item,parent,false)
         return ViewHolder(view)
     }
 
@@ -69,19 +69,19 @@ class RecyclerAdapter(val contentList:ArrayList<contentData>): RecyclerView.Adap
             customToastView()
         }
     }
-        fun onClickInCorrect(position: Int) {
-            if (contentList.get(position).check == false && contentList.size.equals(1) ) {
-                removeRecyclerViewData(position)
-                navController = Navigation.findNavController(view)
-                navController.navigate(R.id.action_questionFragment_to_answerFragment)
-            }
-
-            else if (contentList.get(position).check == false) {
-                    removeRecyclerViewData(position)
-            } else {
-                customToastView()
-            }
+    fun onClickInCorrect(position: Int) {
+        if (contentList.get(position).check == false && contentList.size.equals(1) ) {
+            removeRecyclerViewData(position)
+            navController = Navigation.findNavController(view)
+            navController.navigate(R.id.action_questionFragment_to_answerFragment)
         }
+
+        else if (contentList.get(position).check == false) {
+            removeRecyclerViewData(position)
+        } else {
+            customToastView()
+        }
+    }
 
     fun customToastView(){
         val toast = Toast.makeText(myApp.instance, "틀렸어요.", Toast.LENGTH_SHORT)
@@ -98,4 +98,3 @@ class RecyclerAdapter(val contentList:ArrayList<contentData>): RecyclerView.Adap
     }
 
 }
-

@@ -26,8 +26,8 @@ class MainFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        next_btn=view.findViewById(R.id.next_btn)
-        navController =Navigation.findNavController(view)
+        next_btn = view.findViewById(R.id.next_btn)
+        navController = Navigation.findNavController(view)
         next_btn.setOnClickListener {
             navController.navigate(R.id.action_mainFragment_to_questionFragment)
 
@@ -35,6 +35,4 @@ class MainFragment: Fragment() {
         }
 
     }
-
-
 }

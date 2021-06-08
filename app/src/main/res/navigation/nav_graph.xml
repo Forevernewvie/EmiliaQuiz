@@ -43,7 +43,8 @@
     <fragment
         android:id="@+id/answerFragment"
         android:name="com.example.firstapp.fragment.answerFragment"
-        android:label="answerFragment" >
+        android:label="answerFragment"
+        tools:layout="@layout/answerfragment">
         <action
             android:id="@+id/action_answerFragment_to_mainFragment"
             app:destination="@id/mainFragment" />

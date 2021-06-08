@@ -30,6 +30,8 @@ class answerFragment: Fragment() {
         home_Btn=view.findViewById(R.id.home_Btn)
         navController =Navigation.findNavController(view)
         home_Btn.setOnClickListener {
+
+
             navController.navigate(R.id.action_answerFragment_to_mainFragment)
 
         }

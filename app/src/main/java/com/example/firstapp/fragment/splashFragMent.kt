@@ -12,7 +12,7 @@ import com.example.firstapp.R
 
 class splashFragMent: Fragment() {
 
-    lateinit var navController: NavController
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,5 +22,3 @@ class splashFragMent: Fragment() {
         return inflater.inflate(R.layout.splash_main, container, false)
     }
 }
-
-
