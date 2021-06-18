@@ -11,31 +11,38 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.example.firstapp.R
+import com.example.firstapp.databinding.AnswerfragmentBinding
 
 class answerFragment: Fragment() {
 
     lateinit var navController: NavController
-    lateinit var home_Btn: ImageView
+
+    private var mBinding: AnswerfragmentBinding?=null
+    private val binding get() = mBinding!!
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-
-        return inflater.inflate(R.layout.answerfragment, container, false)
+        mBinding = AnswerfragmentBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        home_Btn=view.findViewById(R.id.home_Btn)
-        navController =Navigation.findNavController(view)
-        home_Btn.setOnClickListener {
 
-
+        binding.homeBtn.setOnClickListener {
+            navController =Navigation.findNavController(view)
             navController.navigate(R.id.action_answerFragment_to_mainFragment)
-
         }
 
+
+    }
+
+    override fun onDestroyView() {
+        mBinding =null
+        super.onDestroyView()
     }
 
 
